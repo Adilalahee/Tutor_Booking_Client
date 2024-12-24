@@ -11,7 +11,12 @@ import 'swiper/css/navigation';
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import bg1 from '../../assets/Slider_1.jpg'
+import bg2 from '../../assets/Slider_2.jpg'
+import bg3 from '../../assets/Slider_3.jpg'
 import Slide from './Slide';
+
+
 export default function Slider () {
     // const progressCircle = useRef(null);
     // const progressContent = useRef(null);
@@ -37,13 +42,13 @@ export default function Slider () {
         className="mySwiper"
       >
         <SwiperSlide>
-            <Slide text='Hello slider 1'></Slide>
+            <Slide image={bg1} text='Hello slider 1'></Slide>
         </SwiperSlide>
         <SwiperSlide>
-            <Slide text='Hello slider 2'></Slide>
+            <Slide image={bg2} text='Hello slider 2'></Slide>
         </SwiperSlide>
         <SwiperSlide>
-            <Slide text='Hello slider 3'></Slide>
+            <Slide image={bg3} text='Hello slider 3'></Slide>
         </SwiperSlide>
 
         {/* <div className="autoplay-progress" slot="container-end">
