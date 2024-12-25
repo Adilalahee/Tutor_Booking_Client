@@ -17,7 +17,7 @@ const BookingDetails = () => {
         const {data}=await axios.get(`${import.meta.env.VITE_API_URL}/updateBooking/${id}`)
         setBook(data)
     }
-    const {_id,name,email,language,image,price,description,review}=book;
+    const {_id,name,buyer,language,image,price,description,review,email}=book;
     console.log(book)
     const handleSubmit=async e=>{
         e.preventDefault();
@@ -26,7 +26,7 @@ const BookingDetails = () => {
         const email=user?.email;
         const tutorid=_id;
         if(price<price) return alert("not possible")
-        const bidbookData={tutorid,price,email}
+        const bidbookData={tutorid,price,email,buyer}
         try{await axios.post(`${import.meta.env.VITE_API_URL}/mybookdata`,bidbookData)
         form.reset();
         toast("Data added")
