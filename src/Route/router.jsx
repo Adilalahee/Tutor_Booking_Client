@@ -12,6 +12,7 @@ import Register from "../Authentication/Register";
 import FindTutor from "../pages/FindTutor";
 import TabDetails from "../Components/Tabs/TabDetails";
 import UpdateBooking from "../pages/UpdateBooking";
+import BookingDetails from "../pages/BookingDetails";
 
 const router = createBrowserRouter([
     {
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
         {
           path:'/updatebooking/:id',
           element:<UpdateBooking></UpdateBooking>
+        },
+        {
+          path:'/bookingDetails/:id',
+          element:<BookingDetails></BookingDetails>
         },
         {
           path:"/login",

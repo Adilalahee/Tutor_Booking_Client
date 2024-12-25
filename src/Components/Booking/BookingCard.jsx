@@ -1,7 +1,8 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const BookingCard = ({booking}) => {
-    const {name,email,language,image}=booking;
+    const {_id,name,email,language,image}=booking;
     return (
     <>
      <div className="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
@@ -24,6 +25,7 @@ const BookingCard = ({booking}) => {
       {/* Footer (Optional) */}
       <div className="p-4 bg-gray-100">
         <button className="btn btn-primary w-full">Follow</button>
+        <NavLink to={`/bookingDetails/${_id}`}>Details</NavLink>
       </div>
     </div>
     </>
