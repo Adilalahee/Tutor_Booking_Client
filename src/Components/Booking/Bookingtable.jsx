@@ -26,7 +26,7 @@ const Bookingtable = ({booking,idx}) => {
         <td><NavLink to={`/details/${_id}`}>Details</NavLink></td>
         <td>
             <div className='flex gap-2'>
-            <NavLink to={`/updatebooking/${_id}`}>Details</NavLink>
+            <NavLink to={`/updatebooking/${_id}`}>Update</NavLink>
                 <button onClick={()=>handleDelete(booking._id)}>Delete</button>
             </div></td>
         
