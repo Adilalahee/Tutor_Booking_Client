@@ -23,7 +23,7 @@ const Bookingtable = ({booking,idx}) => {
         <td>{name}</td>
         <td>{price}</td>
         <td>{language}</td>
-        {/* <td><NavLink to={`/details/${_id}`}>Details</NavLink></td> */}
+        <td><NavLink to={`/bookingdetails/${_id}`}>Details</NavLink></td>
         <td>
             <div className='flex gap-2'>
             <NavLink to={`/updatebooking/${_id}`}>Update</NavLink>

@@ -13,6 +13,7 @@ import FindTutor from "../pages/FindTutor";
 import TabDetails from "../Components/Tabs/TabDetails";
 import UpdateBooking from "../pages/UpdateBooking";
 import BookingDetails from "../pages/BookingDetails";
+import MyBookedTutor from "../pages/MyBookedTutor";
 
 const router = createBrowserRouter([
     {
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
         {
           path:'/bookingDetails/:id',
           element:<BookingDetails></BookingDetails>
+        },
+        {
+          path:'/mybookedtutor',
+          element:<MyBookedTutor></MyBookedTutor>
         },
         {
           path:"/login",
