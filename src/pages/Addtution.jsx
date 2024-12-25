@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import AuthContext from '../Auth/AuthContext';
 
 const Addtution = () => {
-    
+    const {user}=useContext(AuthContext);
+
     const handleSubmit = (e) => {
         e.preventDefault();
         // console.log('Form submitted:', tutorial);
@@ -13,8 +15,17 @@ const Addtution = () => {
         const description=form.description.value;
         const review=form.review.value;
     
-
         console.log(name,image,language,price,description,review)
+
+        const addTutorialData={
+            buyer:
+            {name:user?.displayName}
+            ,
+            image,
+            language,
+            price,
+            description,
+            review}
         // Here you would typically make an API call to save the data
       };
     
@@ -43,7 +54,7 @@ const Addtution = () => {
               type="text"
               id="name"
               name="name"
-            //   value={tutorial.name}
+              defaultValue={user?.name}
             //   onChange={handleChange}
               className="input input-bordered w-full mt-2"
               placeholder="Enter tutorial name"
