@@ -51,6 +51,7 @@ const BookingDetails = () => {
           <div className="flex justify-between items-center mt-4">
             <div className="text-lg font-bold text-green-500">{price}</div>
             <div className="text-sm text-yellow-500">{email}</div>
+            <div className="text-sm text-yellow-500">{review}</div>
           </div>
           {/* <div className="card-actions justify-center mt-4">
             <button className="btn btn-primary w-full">Book Now</button>

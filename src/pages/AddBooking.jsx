@@ -17,10 +17,11 @@ const AddBooking = () => {
         const image=form.image.value;
         const language=form.language.value;
         const price=form.price.value;
+        const review=form.review.value;
         const addBookingForm={name,
             buyer:{email,name:user?.displayName
             },
-            image,language,price}
+            image,language,price,review}
       try{await axios.post(`${import.meta.env.VITE_API_URL}/addbooking`,addBookingForm)
       form.reset();
       toast("Data added")
