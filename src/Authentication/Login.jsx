@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import AuthContext from '../Auth/AuthContext';
+import toast, { Toaster } from 'react-hot-toast';
 
 const Login = () => {
   const { signIn, signInWithGoogle } = useContext(AuthContext)
@@ -29,7 +30,7 @@ const Login = () => {
         // setError('');
       };
     return (
-        <>
+      <>
        <div className="flex justify-center items-center h-screen bg-gray-100">
       <div className="w-full max-w-md p-8 bg-white rounded-lg shadow-md">
         <h2 className="text-2xl font-bold text-center mb-6">Login</h2>
@@ -96,7 +97,7 @@ const Login = () => {
           </div>
       </div>
     </div>
-        </>
+      </>
     );
 };
 

@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
+
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -11,12 +11,10 @@ import 'swiper/css/navigation';
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import bg1 from '../../assets/Slider_1.jpg'
-import bg2 from '../../assets/Slider_2.jpg'
-import bg3 from '../../assets/Slider_3.jpg'
+import bg1 from "../../assets/Slider_1.jpg"
+import bg2 from "../../assets/Slider_2.jpg"
+import bg3 from "../../assets/Slider_3.jpg"
 import Slide from './Slide';
-
-
 export default function Slider () {
     // const progressCircle = useRef(null);
     // const progressContent = useRef(null);
