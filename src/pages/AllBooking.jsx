@@ -5,14 +5,15 @@ import BookingCard from '../Components/Booking/BookingCard';
 const AllBooking = () => {
     const [bookings,setBookings]=useState([]);
     const [filter,setFilter]=useState('');
+    const [search,setSearch]=useState('');
 
     useEffect(()=>{
         const getAllBooking=async()=>{
-            const {data}=await axios.get(`${import.meta.env.VITE_API_URL}/all-booking?filter=${filter}`)
+            const {data}=await axios.get(`${import.meta.env.VITE_API_URL}/all-booking?filter=${filter}&search=${search}`)
             setBookings(data)
         }
   getAllBooking()
-    },[filter])
+    },[filter, search])
 
     console.log(filter)
     return (
@@ -20,17 +21,18 @@ const AllBooking = () => {
              <div className='flex flex-col md:flex-row justify-center items-center gap-5 '>
           <div>
             <select
-              name='category'
-              id='category'
+              name='language'
+              id='language'
+              onChange={(e)=>setFilter(e.target.value)}
               className='border p-4 rounded-lg'
-              onChange={ e =>setFilter(e.target.value)}
+            
             >
               <option value=''>Select language</option>
-            <option value='English'>English</option>
-            <option value='Spanish'>Spanish</option>
-            <option value='French'>French</option>
-            <option value='German'>German</option>
-            <option value='Chinese'>Chinese</option>
+            <option value='english'>English</option>
+            <option value='spanish'>Spanish</option>
+            <option value='french'>French</option>
+            <option value='german'>German</option>
+            <option value='chinese'>Chinese</option>
             </select>
           </div>
 
@@ -40,6 +42,7 @@ const AllBooking = () => {
                 className='px-6 py-2 text-gray-700 placeholder-gray-500 bg-white outline-none focus:placeholder-transparent'
                 type='text'
                 name='search'
+                onChange={(e)=>setSearch(e.target.value)}
                 placeholder='Enter Job Title'
                 aria-label='Enter Job Title'
               />

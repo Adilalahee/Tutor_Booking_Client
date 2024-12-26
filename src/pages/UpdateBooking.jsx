@@ -21,7 +21,7 @@ const UpdateBooking = () => {
         e.preventDefault();
         const form=e.target;
         const name=form.name.value;
-        const email=form.email.value;
+        const email=user.email;
         const image=form.image.value;
         const language=form.language.value;
         const price=form.price.value;
@@ -70,7 +70,7 @@ const UpdateBooking = () => {
             type="email"
             id="email"
             name="email"
-            defaultValue={booking.email}
+            defaultValue={user.email}
             disabled="true"
             // value={formData.email}
             // onChange={handleChange}
