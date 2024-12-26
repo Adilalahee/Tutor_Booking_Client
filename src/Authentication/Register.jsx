@@ -30,7 +30,7 @@ const Register = () => {
           </label>
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Login</button>
+          <button className="btn btn-primary">Login Now</button>
         </div>
       </form>
     </div>
