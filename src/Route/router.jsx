@@ -9,7 +9,6 @@ import MyBooking from "../pages/MyBooking";
 import AllBooking from "../pages/AllBooking";
 import Login from "../Authentication/Login";
 import Register from "../Authentication/Register";
-import FindTutor from "../pages/FindTutor";
 import TabDetails from "../Components/Tabs/TabDetails";
 import UpdateBooking from "../pages/UpdateBooking";
 import BookingDetails from "../pages/BookingDetails";
@@ -41,10 +40,6 @@ const router = createBrowserRouter([
         {
           path:"/allbooking",
           element:<AllBooking></AllBooking>
-        },
-        {
-          path:"/findtutor",
-          element:<FindTutor></FindTutor>
         },
         {
           path:"/tabDetails",

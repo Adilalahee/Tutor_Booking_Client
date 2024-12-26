@@ -52,17 +52,6 @@ const AllBooking = () => {
               </button>
             </div>
           </form>
-          <div>
-            <select
-              name='category'
-              id='category'
-              className='border p-4 rounded-md'
-            >
-              <option value=''>Sort By Deadline</option>
-              <option value='dsc'>Descending Order</option>
-              <option value='asc'>Ascending Order</option>
-            </select>
-          </div>
           <button className='btn'>Reset</button>
         </div>
     <div className='grid grid-cols-3 gap-4'>

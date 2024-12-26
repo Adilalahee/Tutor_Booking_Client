@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Navbar from '../Shared/Navbar';
 import Footer from '../Shared/Footer';
 import { Outlet } from 'react-router-dom';
-import Language from '../pages/Language';
-import Tutor from '../pages/Tutor';
 import ('./MainLayout.css')
 
 const MainLayout = () => {
@@ -32,8 +30,6 @@ const MainLayout = () => {
    <div className='min-h-[calc(100vh-300px)]'>
    <Outlet></Outlet>
    </div>
-   <Language></Language>
-   <Tutor></Tutor>
    <Footer></Footer>
    </div>
    </>
