@@ -47,13 +47,14 @@ const UpdateBooking = () => {
         {/* Name */}
         <div className="form-control mb-4">
           <label htmlFor="name" className="label">
-            <span className="label-text">Name (Who Logged In)</span>
+            <span className="label-text">Name</span>
           </label>
           <input
             type="text"
             id="name"
             name="name"
             defaultValue={booking.name}
+            disabled="true"
             // value={formData.name}
             // onChange={handleChange}
             className="input input-bordered w-full"
@@ -70,7 +71,7 @@ const UpdateBooking = () => {
             type="email"
             id="email"
             name="email"
-            defaultValue={user.email}
+            defaultValue={booking.email}
             disabled="true"
             // value={formData.email}
             // onChange={handleChange}
@@ -107,12 +108,16 @@ const UpdateBooking = () => {
             // onChange={handleChange}
             className="select select-bordered w-full"
           >
-            <option value="">Select language</option>
+       <option value="">Select language</option>
             <option value="english">English</option>
             <option value="spanish">Spanish</option>
             <option value="french">French</option>
             <option value="german">German</option>
             <option value="chinese">Chinese</option>
+            <option value="italian">Italian</option>
+            <option value="arabic">Arabic</option>
+            <option value="portugese">Portugese</option>
+            <option value="japanese">Japanese</option>
           </select>
         </div>
 
@@ -157,6 +162,7 @@ const UpdateBooking = () => {
             id="review"
             name="review"
             defaultValue={booking.review}
+            disabled='true'
             // onChange={handleChange}
             className="input input-bordered w-full"
             min="0"

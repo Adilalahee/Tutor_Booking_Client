@@ -1,0 +1,15 @@
+/* Default Light Theme */
+body.light {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  body.dark {
+    background-color: #333333;
+    color: #ffffff;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
