@@ -1,8 +1,11 @@
 import React, { useContext } from 'react';
 import AuthContext from '../Auth/AuthContext';
 import toast, { Toaster } from 'react-hot-toast';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+  const navigate=useNavigate()
   const { signIn, signInWithGoogle } = useContext(AuthContext)
 
   const handleGoogleSignIn = async () => {
@@ -10,7 +13,7 @@ const Login = () => {
       await signInWithGoogle()
 
       toast.success('Signin Successful')
-      navigate(from, { replace: true })
+      // navigate(from, { replace: true })
     } catch (err) {
       console.log(err)
       toast.error(err?.message)
