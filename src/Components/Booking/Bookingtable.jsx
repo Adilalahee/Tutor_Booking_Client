@@ -3,7 +3,7 @@ import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
 const Bookingtable = ({booking,idx}) => {
-    const {_id,name,email,language,image,price}=booking;
+    const {_id,name,language,image,price,review}=booking;
     
 
     const handleDelete=async id=>{
@@ -21,13 +21,14 @@ const Bookingtable = ({booking,idx}) => {
         <td>{idx+1}</td>
         <td> <img className='w-16 h-8' src={image} alt="Sports" /> </td>
         <td>{name}</td>
-        <td>{price}</td>
         <td>{language}</td>
-        <td><NavLink to={`/bookingdetails/${_id}`}>Details</NavLink></td>
+        <td>{price}</td>
+        <td>{review}</td>
+        
         <td>
             <div className='flex gap-2'>
-            <NavLink to={`/updatebooking/${_id}`}>Update</NavLink>
-                <button onClick={()=>handleDelete(booking._id)}>Delete</button>
+            <NavLink className='btn btn-accent' to={`/updatebooking/${_id}`}>Update</NavLink>
+                <button className='btn btn-warning' onClick={()=>handleDelete(booking._id)}>Delete</button>
             </div></td>
         
       </tr>

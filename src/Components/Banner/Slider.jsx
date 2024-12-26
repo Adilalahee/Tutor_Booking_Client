@@ -40,13 +40,13 @@ export default function Slider () {
         className="mySwiper"
       >
         <SwiperSlide>
-            <Slide image={bg1} text='Hello slider 1'></Slide>
+            <Slide image={bg1} text='Want to add tutorial?'></Slide>
         </SwiperSlide>
         <SwiperSlide>
-            <Slide image={bg2} text='Hello slider 2'></Slide>
+            <Slide image={bg2} text='Join with us'></Slide>
         </SwiperSlide>
         <SwiperSlide>
-            <Slide image={bg3} text='Hello slider 3'></Slide>
+            <Slide image={bg3} text='Get hired'></Slide>
         </SwiperSlide>
 
         {/* <div className="autoplay-progress" slot="container-end">

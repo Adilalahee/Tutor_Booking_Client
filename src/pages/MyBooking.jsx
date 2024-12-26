@@ -29,7 +29,9 @@ const MyBooking = () => {
         </th>
         <th>Image</th>
         <th>Name</th>
+        <th>Language</th>
         <th>Price</th>
+        <th>Review</th>
         <th></th>
       </tr>
     </thead>

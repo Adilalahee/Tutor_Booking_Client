@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import AuthContext from '../Auth/AuthContext';
 import toast, { Toaster } from 'react-hot-toast';
 
@@ -7,10 +7,10 @@ const Navbar = () => {
   const {user,logOut}=useContext(AuthContext);
   const links=<>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/allbooking">All Booking</Link></li>
-        <li><Link to="/addbooking">Add Booking</Link></li>
-        <li><Link to="/mybooking">My Booking</Link></li>
-        <li><Link to="/findtutor">Find Tutor</Link></li>
+        <li><Link to="/allbooking">Find Tutor</Link></li>
+        <li><Link to="/addbooking">Add Tutorials</Link></li>
+        <li><Link to="/mybooking">My Tutorials</Link></li>
+        <li><Link to="/mybookedtutor">My Booked tutors</Link></li>
   </>
 
 
@@ -41,22 +41,19 @@ const Navbar = () => {
      {links}
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">daisyUI</a>
+    <a className="btn btn-ghost text-xl">Teachers Time</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
 {links}
-    {!user && (
-            <li>
-              <Link to='/login'>Login</Link>
-            </li>
-          )}
     </ul>
 
   </div>
   <div className="navbar-end">
-  {user && (
-          <div className='dropdown dropdown-end z-50'>
+  {
+      user && user?.email? 
+      <div className='flex gap-2'>
+        <div className='dropdown dropdown-end z-50'>
             <div
               tabIndex={0}
               role='button'
@@ -74,16 +71,16 @@ const Navbar = () => {
               tabIndex={0}
               className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52'
             >
-              {links}
-              <button
-                  onClick={logOut}
-                  className='bg-gray-200 block text-center'
-                >
-                  Logout
-                </button>
+              <h1>{user.displayName}</h1>
             </ul>
           </div>
-        )}
+        <button onClick={logOut} className='ml-3'>Logout</button>
+      </div>
+      :
+      <NavLink className='btn btn-neutral' to='/login'>Login</NavLink>
+    }
+  
+
   </div>
 </div>
       </>

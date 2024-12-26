@@ -14,6 +14,7 @@ import TabDetails from "../Components/Tabs/TabDetails";
 import UpdateBooking from "../pages/UpdateBooking";
 import BookingDetails from "../pages/BookingDetails";
 import MyBookedTutor from "../pages/MyBookedTutor";
+import Privateroute from "./Privateroute";
 
 const router = createBrowserRouter([
     {
@@ -27,11 +28,15 @@ const router = createBrowserRouter([
         },
         {
           path:"/addbooking",
-          element:<AddBooking></AddBooking>
+          element:<Privateroute>
+            <AddBooking></AddBooking>
+          </Privateroute>
         },
         {
           path:"/mybooking",
-          element:<MyBooking></MyBooking>
+          element:<Privateroute>
+            <MyBooking></MyBooking>
+          </Privateroute>
         },
         {
           path:"/allbooking",
@@ -51,11 +56,15 @@ const router = createBrowserRouter([
         },
         {
           path:'/bookingDetails/:id',
-          element:<BookingDetails></BookingDetails>
+          element:<Privateroute>
+            <BookingDetails></BookingDetails>
+          </Privateroute>
         },
         {
           path:'/mybookedtutor',
-          element:<MyBookedTutor></MyBookedTutor>
+          element:<Privateroute>
+            <MyBookedTutor></MyBookedTutor>
+          </Privateroute>
         },
         {
           path:"/login",

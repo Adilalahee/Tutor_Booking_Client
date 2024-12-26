@@ -40,13 +40,14 @@ const AddBooking = () => {
         {/* Name */}
         <div className="form-control mb-4">
           <label htmlFor="name" className="label">
-            <span className="label-text">Name (Who Logged In)</span>
+            <span className="label-text">Name</span>
           </label>
           <input
             type="text"
             id="name"
             name="name"
-            defaultValue={user?.name}
+            defaultValue={user?.displayName}
+            disabled="true"
             // value={formData.name}
             // onChange={handleChange}
             className="input input-bordered w-full"
@@ -106,6 +107,10 @@ const AddBooking = () => {
             <option value="french">French</option>
             <option value="german">German</option>
             <option value="chinese">Chinese</option>
+            <option value="italian">Italian</option>
+            <option value="arabic">Arabic</option>
+            <option value="portugese">Portugese</option>
+            <option value="japanese">Japanese</option>
           </select>
         </div>
 

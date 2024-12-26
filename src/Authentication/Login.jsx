@@ -1,43 +1,53 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import AuthContext from '../Auth/AuthContext';
 import toast, { Toaster } from 'react-hot-toast';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
 const Login = () => {
-  const navigate=useNavigate()
+  const navigate = useNavigate()
+  const location = useLocation()
+  const [error,setError]=useState("");
+  const from = location?.state || '/'
+  console.log(from)
   const { signIn, signInWithGoogle } = useContext(AuthContext)
 
+  // Google Signin
   const handleGoogleSignIn = async () => {
     try {
       await signInWithGoogle()
 
       toast.success('Signin Successful')
-      // navigate(from, { replace: true })
+      navigate(from, { replace: true })
     } catch (err) {
       console.log(err)
       toast.error(err?.message)
     }
   }
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-    
-        // if (!email || !password) {
-        //   setError('Please fill in both fields.');
-        //   return;
-        // }
-    
-        // console.log('Email:', email);
-        // console.log('Password:', password);
-        // setError('');
-      };
+  // Email Password Signin
+  const handleSignIn = async e => {
+    e.preventDefault()
+    const form = e.target
+    const email = form.email.value
+    const pass = form.password.value
+    console.log({ email, pass })
+    try {
+      //User Login
+      await signIn(email, pass)
+      toast.success('Signin Successful')
+      navigate(from, { replace: true })
+    } catch (error) {
+      console.log(error)
+      toast.error(error?.message)
+    }
+  }
     return (
       <>
        <div className="flex justify-center items-center h-screen bg-gray-100">
       <div className="w-full max-w-md p-8 bg-white rounded-lg shadow-md">
         <h2 className="text-2xl font-bold text-center mb-6">Login</h2>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSignIn}>
           <div className="form-control mb-4">
             <label className="label">
               <span className="label-text">Email</span>
@@ -60,7 +70,7 @@ const Login = () => {
             />
           </div>
 
-          {/* {error && <p className="text-red-500 text-center mb-4">{error}</p>} */}
+          {error && <p className="text-red-500 text-center mb-4">{error}</p>}
 
           <button
             type="submit"
@@ -71,9 +81,9 @@ const Login = () => {
         </form>
         <div
             onClick={handleGoogleSignIn}
-            className='flex cursor-pointer items-center justify-center mt-4 text-gray-600 transition-colors duration-300 transform border rounded-lg   hover:bg-gray-50 '
+            className='flex flex-col cursor-pointer items-center justify-center mt-4 text-gray-600 transition-colors duration-300 transform border rounded-lg   hover:bg-gray-50 '
           >
-            <div className='px-4 py-2'>
+            <div className='flex gap-3 px-4 py-2 btn mx-auto mt-3'>
               <svg className='w-6 h-6' viewBox='0 0 40 40'>
                 <path
                   d='M36.3425 16.7358H35V16.6667H20V23.3333H29.4192C28.045 27.2142 24.3525 30 20 30C14.4775 30 10 25.5225 10 20C10 14.4775 14.4775 9.99999 20 9.99999C22.5492 9.99999 24.8683 10.9617 26.6342 12.5325L31.3483 7.81833C28.3717 5.04416 24.39 3.33333 20 3.33333C10.7958 3.33333 3.33335 10.7958 3.33335 20C3.33335 29.2042 10.7958 36.6667 20 36.6667C29.2042 36.6667 36.6667 29.2042 36.6667 20C36.6667 18.8825 36.5517 17.7917 36.3425 16.7358Z'
@@ -92,12 +102,10 @@ const Login = () => {
                   fill='#1976D2'
                 />
               </svg>
+              <h3>Sign In with Google</h3>
             </div>
-
-            <span className='w-5/6 px-4 py-3 font-bold text-center'>
-              Sign in with Google
-            </span>
           </div>
+          <h3 className='text-xl mt-3'>Don't have an account? <NavLink to='/register'>Register</NavLink></h3>
       </div>
     </div>
       </>

@@ -1,0 +1,38 @@
+[
+    {
+      "language": "English",
+      "id": 1
+    },
+    {
+      "language": "Spanish",
+      "id": 2
+    },
+    {
+      "language": "French",
+      "id": 3
+    },
+    {
+      "language": "German",
+      "id": 4
+    },
+    {
+      "language": "Italian",
+      "id": 5
+    },
+    {
+      "language": "Japanese",
+      "id": 6
+    },
+    {
+      "language": "Chinese",
+      "id": 7
+    },
+    {
+      "language": "Arabic",
+      "id": 8
+    },
+    {
+      "language": "Portuguese",
+      "id": 9
+    }
+  ]
