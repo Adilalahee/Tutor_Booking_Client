@@ -3,6 +3,7 @@ import 'react-tabs/style/react-tabs.css';
 import { HiArrowRight } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 const TabCategories = () => {
   const [bookings,setBookings]=useState([]);
