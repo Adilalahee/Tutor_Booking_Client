@@ -8,9 +8,13 @@ const Navbar = () => {
   const links=<>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/allbooking">Find Tutor</Link></li>
-        <li><Link to="/addbooking">Add Tutorials</Link></li>
-        <li><Link to="/mybooking">My Tutorials</Link></li>
-        <li><Link to="/mybookedtutor">My Booked tutors</Link></li>
+        <li><Link to="/">About</Link></li>
+        <li><Link to="/">Contact</Link></li>
+  </>
+  const privatelinks=<>
+  <li><Link to="/mybooking">My Tutorials</Link></li>
+  <li><Link to="/addbooking">Add Tutorials</Link></li>
+  <li><Link to="/mybookedtutor">My Booked tutors</Link></li>
   </>
 
 
@@ -18,7 +22,7 @@ const Navbar = () => {
   
     return (
       <>
-      <div className="navbar text-white bg-stone-500">
+      <div className="navbar text-[#333333] bg-[#F7F9FC]">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -44,8 +48,11 @@ const Navbar = () => {
     <a className="btn btn-ghost text-xl">Teachers Time</a>
   </div>
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
-{links}
+    <ul className="menu menu-horizontal px-1 text-xl">
+ {links} 
+      {user && user?.email? [privatelinks] :''}
+
+
     </ul>
 
   </div>
