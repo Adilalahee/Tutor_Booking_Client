@@ -20,7 +20,7 @@ getAllBooking()
    <>
 
         <div className='container py-5'>
-            <h1 className='text-2xl font-semibold text-center text-gray-800 capitalize'>
+            <h1 className='text-2xl font-semibold text-center text-[#333333] capitalize'>
                 Browse Tutor by Categories
             </h1>
             <div className='flex'>
@@ -28,39 +28,39 @@ getAllBooking()
       <div className="flex items-center gap-3  p-4">
         {/* Title */}
         <div>
-        <Link to="/tabDetails" className="text-xl font-semibold text-gray-800">Chinese</Link>
+        <Link to="/tabDetails" className="text-xl font-semibold text-[#333333]">Chinese</Link>
         <HiArrowRight className="text-gray-600 text-2xl hover:text-blue-500 cursor-pointer" />
         </div>
         <div>
-        <Link to="/tabDetails" className="text-xl font-semibold text-gray-800">English</Link>
+        <Link to="/tabDetails" className="text-xl font-semibold text-[#333333]">English</Link>
         <HiArrowRight className="text-gray-600 text-2xl hover:text-blue-500 cursor-pointer" />
         </div>
         <div>
-        <Link to="/tabDetails" className="text-xl font-semibold text-gray-800">Spanish</Link>
+        <Link to="/tabDetails" className="text-xl font-semibold text-[#333333]">Spanish</Link>
         <HiArrowRight className="text-gray-600 text-2xl hover:text-blue-500 cursor-pointer" />
         </div>
         <div>
-        <Link to="/tabDetails" className="text-xl font-semibold text-gray-800">French</Link>
+        <Link to="/tabDetails" className="text-xl font-semibold text-[#333333]">French</Link>
         <HiArrowRight className="text-gray-600 text-2xl hover:text-blue-500 cursor-pointer" />
         </div>
         <div>
-        <Link to="/tabDetails" className="text-xl font-semibold text-gray-800">German</Link>
+        <Link to="/tabDetails" className="text-xl font-semibold text-[#333333]">German</Link>
         <HiArrowRight className="text-gray-600 text-2xl hover:text-blue-500 cursor-pointer" />
         </div>
         <div>
-        <Link to="/tabDetails" className="text-xl font-semibold text-gray-800">Italian</Link>
+        <Link to="/tabDetails" className="text-xl font-semibold text-[#333333]">Italian</Link>
         <HiArrowRight className="text-gray-600 text-2xl hover:text-blue-500 cursor-pointer" />
         </div>
         <div>
-        <Link to="/tabDetails" className="text-xl font-semibold text-gray-800">Portugese</Link>
+        <Link to="/tabDetails" className="text-xl font-semibold text-[#333333]">Portugese</Link>
         <HiArrowRight className="text-gray-600 text-2xl hover:text-blue-500 cursor-pointer" />
         </div>
         <div>
-        <Link to="/tabDetails" className="text-xl font-semibold text-gray-800">Arabic</Link>
+        <Link to="/tabDetails" className="text-xl font-semibold text-[#333333]">Arabic</Link>
         <HiArrowRight className="text-gray-600 text-2xl hover:text-blue-500 cursor-pointer" />
         </div>
         <div>
-        <Link to="/tabDetails" className="text-xl font-semibold text-gray-800">Japanese</Link>
+        <Link to="/tabDetails" className="text-xl font-semibold text-[#333333]">Japanese</Link>
         <HiArrowRight className="text-gray-600 text-2xl hover:text-blue-500 cursor-pointer" />
         </div>
         

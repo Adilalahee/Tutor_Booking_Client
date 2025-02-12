@@ -18,7 +18,7 @@ const TabDetails = () => {
 
     return (
   <>
-     <div className='grid grid-cols-3 gap-4'>
+     <div className='grid grid-cols-5'>
         {
             bookings.map(booking=><BookingCard key={booking._id} booking={booking}></BookingCard>)
         }

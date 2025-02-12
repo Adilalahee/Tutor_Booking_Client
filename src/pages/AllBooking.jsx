@@ -54,7 +54,7 @@ const AllBooking = () => {
           </form>
           <button className='btn'>Reset</button>
         </div>
-    <div className='grid grid-cols-3 gap-4'>
+    <div className='grid grid-cols-5 px-10 py-2'>
         {
             bookings.map(booking=><BookingCard key={booking._id} booking={booking}></BookingCard>)
         }
