@@ -84,7 +84,7 @@ const Navbar = () => {
         <button onClick={logOut} className='ml-3'>Logout</button>
       </div>
       :
-      <NavLink className='btn btn-neutral' to='/login'>Login</NavLink>
+      <NavLink className='btn btn-neutral bg-[#2F80ED]' to='/login'>Login</NavLink>
     }
   
 
